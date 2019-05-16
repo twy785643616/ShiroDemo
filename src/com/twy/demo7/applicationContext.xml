@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="personId" class="com.twy.demo7.Penson">
+		<property name="pname" value="乔丹"></property>
+		<property name="pi" value="#{T(java.lang.Math).PI}"></property>
+		<property name="age" value="5"></property>
+		<property name="homeAddr" value="#{homeAddrId}"></property>
+		<property name="companyAddr" ref="companyAddId"></property>
+	</bean>
+	<bean id="homeAddrId" class="com.twy.demo7.Address">
+		<property name="addr" value="#{companyAddId.addr}"></property>
+		<property name="tel" value="15123"></property>
+	</bean>
+	<bean id="companyAddId" class="com.twy.demo7.Address">
+		<property name="addr" value="儒家"></property>
+		<property name="tel" value="13826"></property>
+	</bean>
+</beans>

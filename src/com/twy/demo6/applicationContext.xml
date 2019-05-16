@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="personId" class="com.twy.demo6.Penson"
+		p:pname="twy"
+		p:age="13"
+		p:homeAddr-ref="homeAddrId"
+		p:companyAddr-ref="companyAddId">
+		
+	</bean>
+	<bean id="homeAddrId" class="com.twy.demo6.Address"
+		p:addr="铁岭"
+		p:tel="123456">
+	</bean>
+	<bean id="companyAddId" class="com.twy.demo6.Address"
+		p:addr="沈阳"
+		p:tel="123456">
+
+	</bean>
+</beans>
